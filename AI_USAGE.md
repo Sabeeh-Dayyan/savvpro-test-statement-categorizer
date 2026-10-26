@@ -30,4 +30,14 @@ These are why every generated change was checked against tests and real output r
 
 ## Token usage
 
-See the usage screenshot attached to the pull request (Claude Code `/cost` output for this session).
+Figures come from the Claude Code session usage log (37 model requests). They were captured at submission time.
+
+| Metric | Tokens |
+|--------|-------:|
+| Input (uncached) | 74 |
+| Output | 86,474 |
+| Cache write | 113,793 |
+| Cache read | 3,195,288 |
+| **Total processed** | **3,395,629** |
+
+Cache reads make up most of the total. They come from the same project context being re-read on every request. They are not newly written content.
